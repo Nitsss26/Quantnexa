@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { Cpu, ShieldCheck, Heart, Terminal, ArrowUp } from 'lucide-react';
-const logoImg = '/assets/tech/QuantNexaLogo.png';
+const logoImg = '/assets/tech/QuantNexaLogoFinal.png';
 
 import { usePathname, useRouter } from 'next/navigation';
 
