@@ -85,7 +85,7 @@ export default function AboutNexa() {
             name: "Mr. \u00A0 Chintan \u00A0Vatsa\u00A0 Jha",
             role: "Head of Advisory & Management",
             quote: "Our Vision Is To Empower Innovators By Building A Future-Ready Technical Ecosystem. At QuantNexa, We Believe In Architecting Next-Gen Platforms That Turn Groundbreaking Ideas Into Tangible Reality.",
-            alumni: "Alumnus of IIT Kharagpur",
+            alumni: "Alumnus, IIT Kharagpur",
             // badge: "SYS FOUNDER"
         },
         // {
