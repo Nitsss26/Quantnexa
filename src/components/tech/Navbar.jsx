@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
-const logoImg = '/assets/tech/QuantNexafinal.png';
+const logoImg = '/assets/tech/QuantNexaLogo.png';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/', isRoute: true },

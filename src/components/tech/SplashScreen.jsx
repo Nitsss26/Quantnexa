@@ -13,7 +13,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-const quantNexaLogo = '/assets/tech/QuantNexafinal.png';
+const quantNexaLogo = '/assets/tech/QuantNexaLogo.png';
 
 const BG    = '#020703';
 const GREEN = '#22ff66';

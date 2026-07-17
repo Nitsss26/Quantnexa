@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-const heroImgLogo = '/assets/tech/QuantNexafinal.png';
+const heroImgLogo = '/assets/tech/QuantNexaLogo.png';
 const heroBg = '/Nexa_Img.png';
 
 export default function Hero() {
