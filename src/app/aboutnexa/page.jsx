@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, ShieldCheck, Cpu } from 'lucide-react';
+import { Users, Target, ShieldCheck, Cpu, GraduationCap } from 'lucide-react';
 
 const FounderImg = '/assets/tech/Founders.jpg';
 const COOImg = '/COO.png'; // CTO and COO might be swapped in filename
@@ -85,6 +85,7 @@ export default function AboutNexa() {
             name: "Mr. \u00A0 Chintan \u00A0Vatsa\u00A0 Jha",
             role: "Head of Advisory & Management",
             quote: "Our Vision Is To Empower Innovators By Building A Future-Ready Technical Ecosystem. At QuantNexa, We Believe In Architecting Next-Gen Platforms That Turn Groundbreaking Ideas Into Tangible Reality.",
+            alumni: "Alumnus of IIT Kharagpur",
             // badge: "SYS FOUNDER"
         },
         // {
@@ -207,7 +208,13 @@ export default function AboutNexa() {
                                 <div className="flex-1 text-center md:text-left flex flex-col justify-center">
                                     {leader.badge && <div className="text-[10px] text-neon-green font-mono uppercase tracking-[0.2em] mb-4 font-bold">{leader.badge}</div>}
                                     <h3 className="text-white font-cyber text-2xl md:text-4xl uppercase leading-tight mb-2 whitespace-nowrap">{leader.name}</h3>
-                                    <div className="text-cyber-text text-sm md:text-lg text-neon-emerald mb-4">{leader.role}</div>
+                                    <div className="text-cyber-text text-sm md:text-lg text-neon-emerald mb-2">{leader.role}</div>
+                                    {leader.alumni && (
+                                        <div className="flex items-center justify-center md:justify-start gap-2 mb-4 text-xs font-mono font-bold tracking-wider text-[#FFCC00]">
+                                            <GraduationCap className="w-4 h-4" />
+                                            <span>{leader.alumni}</span>
+                                        </div>
+                                    )}
                                     <p className="text-cyber-text/80 font-mono text-sm leading-relaxed border-l-2 border-neon-green/30 pl-4 mt-2">
                                         "{leader.quote}"
                                     </p>
