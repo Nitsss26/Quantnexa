@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Zilla+Slab:wght@400;500;600;700&family=Anton&family=Bebas+Neue&family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════
+   Tailwind v4 Theme — mirrors the original Tailwind CDN v3 config
+   from index.html so that utility classes like font-cyber, 
+   text-neon-green, bg-cyber-bg etc. work identically.
+   ═══════════════════════════════════════════════════════════════════ */
+@theme {
+  /* ── Colors ─────────────────────────────────────────────────── */
+  --color-primary: #34D562;
+  --color-primary-dark: #28a74b;
+  --color-primary-glow: rgba(52, 213, 98, 0.5);
+  --color-dark: #050505;
+  --color-dark-card: #0A0A0A;
+  --color-dark-border: #222222;
+  --color-neon-green: #22ff66;
+  --color-neon-emerald: #00ff88;
+  --color-cyber-bg: #020703;
+  --color-cyber-card: #050b08;
+  --color-cyber-border: #0b3d1f;
+  --color-cyber-text: #a3b8cc;
+  --color-cyber-glow: rgba(34, 255, 102, 0.15);
+
+  /* ── Font Families ──────────────────────────────────────────── */
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Rajdhani", sans-serif;
+  --font-slab: "Zilla Slab", serif;
+  --font-anton: "Anton", sans-serif;
+  --font-cyber: "Clash Display", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ── Animations ─────────────────────────────────────────────── */
+  --animate-spin-slow: spin 10s linear infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scan: scan 4s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes scan {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Base layer — global resets & body styles
+   ═══════════════════════════════════════════════════════════════════ */
+@layer base {
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    min-height: 100vh;
+    zoom: 1 !important;
+    background-color: #030303;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #030303;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CSS Variables (non-Tailwind) — used by older component styles
+   ═══════════════════════════════════════════════════════════════════ */
+:root {
+  /* WARM PALETTE (used for hero overlays + section accents) */
+  --sunset-amber: #FF8C42;
+  --sunset-coral: #FF6B6B;
+  --sunset-gold: #FFB347;
+  --warm-sky: #E8956D;
+
+  /* DARK PALETTE (main UI color scheme) */
+  --bg-dark: #0B0F14;
+  --bg-card: #131920;
+  --bg-elevated: #1A2332;
+
+  /* TEAL PALETTE (holographic) */
+  --teal: #00E5FF;
+  --teal-mid: #00BCD4;
+  --teal-soft: #B2EBF2;
+  --teal-glow: rgba(0, 229, 255, 0.12);
+  --teal-border: rgba(0, 229, 255, 0.2);
+
+  /* TEXT */
+  --text-primary: #F8FAFF;
+  --text-secondary: #8FA3B1;
+  --text-dim: #4A5C6A;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Typography Utilities
+   ═══════════════════════════════════════════════════════════════════ */
+.font-clash { font-family: 'Clash Display', sans-serif; }
+.font-dm { font-family: 'DM Sans', sans-serif; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Canvas / Hero
+   ═══════════════════════════════════════════════════════════════════ */
+.hero-canvas-wrap {
+    position: fixed;
+    top: -1%;
+    left: -1%;
+    width: 102%;
+    height: 102%;
+    z-index: 0;
+    background: #000;
+}
+
+.canvas-full {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+    filter: brightness(0.8) contrast(1.1) saturate(1.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Animations
+   ═══════════════════════════════════════════════════════════════════ */
+@keyframes spin-drone {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.drone-spinner {
+  animation: spin-drone 3s linear infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Gradient Text Classes
+   ═══════════════════════════════════════════════════════════════════ */
+.text-gradient-teal-amber {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--sunset-amber) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-soft) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Buttons
+   ═══════════════════════════════════════════════════════════════════ */
+.btn-primary-teal {
+  background: var(--teal);
+  color: var(--bg-dark);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-teal:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px var(--teal-glow);
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Glass & Card Styles
+   ═══════════════════════════════════════════════════════════════════ */
+.nexus-card {
+  background: var(--bg-card);
+  border: 1px solid var(--teal-border);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.nexus-card:hover {
+  border-color: rgba(0, 229, 255, 0.45);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+}
+
+.nexus-pill {
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  background: rgba(0, 229, 255, 0.05);
+}
+
+/* GSAP Start States */
+.hero-line-1, .hero-line-2, .hero-line-3, .hero-line-4,
+.domain-pills, .hero-body, .cta-row, .hero-stats {
+  opacity: 0;
+}
+
+/* Drone propeller setup */
+.drone-arm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 60px;
+  background: var(--teal);
+  transform-origin: top center;
+}
+.drone-propeller {
+  position: absolute;
+  top: 60px;
+  left: -9px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--teal);
+  border-radius: 50%;
+}
+
+/* Glassmorphism Panel (cyber theme) */
+.glass-panel {
+  background: rgba(5, 11, 8, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 255, 102, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), inset 0 0 12px rgba(34, 255, 102, 0.05);
+}
+
+.glass-panel-glow {
+  border: 1px solid rgba(34, 255, 102, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), 0 0 15px rgba(34, 255, 102, 0.1), inset 0 0 12px rgba(34, 255, 102, 0.05);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 242, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Typography glow */
+.text-glow-teal {
+  text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+/* Nexus Button */
+.nexus-btn-primary {
+  background: var(--teal-primary);
+  color: #000;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px var(--teal-glow);
+}
+
+.nexus-btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0, 242, 255, 0.3);
+}
+
+/* Ticker Animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 30s linear infinite;
+}
+
+/* Form Styling */
+.input-nexus {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.input-nexus:focus {
+  outline: none;
+  border-color: var(--teal-primary);
+}
+
+/* Product Section Layout */
+.product-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  padding: 4rem 0;
+}
+
+.tag-nexus {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--teal-glow);
+  color: var(--teal-primary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Mobile Responsiveness
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero-line-2, .hero-line-3, .hero-line-4 {
+    letter-spacing: -0.02em;
+  }
+
+  .scene-overlay h2 {
+    letter-spacing: -0.01em;
+  }
+
+  .fixed.top-4.left-4 {
+    height: 48px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-body {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .status-pill {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   index.html <style> block — exact copy from the original project
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* GPU acceleration for animated elements */
+canvas {
+  will-change: contents;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+[class*="motion"],
+[class*="animate"],
+[class*="transition"] {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34D562;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.422);
+  color: transparent;
+}
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-border-flow {
+  background-size: 200% 200%;
+  animation: border-flow 3s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Glowing Neon Text */
+.text-neon-glow {
+  text-shadow: 0 0 5px rgba(34, 255, 102, 0.5), 0 0 10px rgba(34, 255, 102, 0.3);
+}
+
+.text-emerald-glow {
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.5), 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* Futuristic Scanline Effect */
+.scanline::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(34, 255, 102, 0.15) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 20;
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Cyber grid background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(34, 255, 102, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 255, 102, 0.03) 1px, transparent 1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Animated cyber border */
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(34, 255, 102, 0.15); }
+  50% { border-color: rgba(34, 255, 102, 0.6); }
+}
+
+.cyber-border-pulse {
+  animation: border-glow 4s infinite ease-in-out;
+}
+
+/* Custom glow utility */
+.glow-shadow-green {
+  box-shadow: 0 0 20px rgba(34, 255, 102, 0.15);
+}
+
+.glow-shadow-green-strong {
+  box-shadow: 0 0 30px rgba(34, 255, 102, 0.35);
+}
+
+/* Hologram Scanning Line Animation */
+@keyframes hologram-scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.hologram-scanner {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #22ff66, transparent);
+  box-shadow: 0 0 8px #22ff66, 0 0 12px #22ff66;
+  animation: hologram-scan 3s infinite linear;
+}
+
+/* Radial tech layout */
+.tech-orbit {
+  border: 1px dashed rgba(34, 255, 102, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
