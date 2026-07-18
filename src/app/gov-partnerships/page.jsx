@@ -2,18 +2,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-// Official Image Imports
-import EduMinAssam from '../../../../assets/OurSocialImpact/EduMinAssam.jpg';
-import MP_Assam from '../../../../assets/OurSocialImpact/MP_Assam.jpg';
-import IAS_Anil_Kumar_Jha from '../../../../assets/OurSocialImpact/IAS_Anil_Kumar_Jha.jpg';
-import MrKeshabMahanta from '../../../../assets/OurSocialImpact/MrKeshabMahanta.png';
-import CharanDasMahant from '../../../../assets/Gov/Charan Das Mahant.png';
-import AnilFirojiya from '../../../../assets/Gov/Anil Firojiya.jpg';
-import JYOTSNA from '../../../../assets/Gov/JYOTSNA.png';
-import JitendraParashar from '../../../../assets/Gov/Jitendra Parashar.jpg';
-import RaoUdayPratap from '../../../../assets/Gov/Rao_Uday_Pratap_Singh.jpeg';
-import IAS_Awanish from '../../../../assets/Gov/IAS Awanish Sharan.jpg';
-
+// Image Imports Removed (using static paths now)
 const Embers = () => {
     const [embers, setEmbers] = React.useState([]);
 
@@ -114,56 +103,56 @@ export default function GovPartnerships() {
         window.scrollTo(0, 0);
     }, []);
 
-    const officials = [
+const officials = [
         // {
-        //     image: EduMinAssam,
+        //     image: '/assets/OurSocialImpact/EduMinAssam.jpg',
         //     name: "Dr. Ranoj Pegu",
         //     designation: "Hon'ble Education Minister, Government of Assam | Transforming Education Through Technology"
         // },
         // {
-        //     image: MrKeshabMahanta,
+        //     image: '/assets/OurSocialImpact/MrKeshabMahanta.png',
         //     name: "Mr. Keshab Mahanta",
         //     designation: "Hon'ble Minister of Revenue & Disaster Management, IT, Science & Technology, Government of Assam"
         // },
         {
-            image: RaoUdayPratap,
+            image: '/assets/Gov/Rao_Uday_Pratap_Singh.jpeg',
             name: "Rao Uday Pratap Singh",
             designation: "Hon'ble Minister of School Education | Minister of Road and Transport",
             imageScale: 1.15,
             objectPosition: "center 10%"
         },
         {
-            image: AnilFirojiya,
+            image: '/assets/Gov/Anil Firojiya.jpg',
             name: "Shri Anil Firojiya",
             designation: "Member of Parliament | Parliamentary Committee on Tourism and Culture, Government of India"
         },
         {
-            image: JYOTSNA,
+            image: '/assets/Gov/JYOTSNA.png',
             name: "Smt. Jyotsna Charandas Mahant",
             designation: "Member of Parliament (Lok Sabha), Korba | Standing Committee on Coal, Mines and Steel"
         },
         // {
-        //     image: MP_Assam,
+        //     image: '/assets/OurSocialImpact/MP_Assam.jpg',
         //     name: "Shri Ranjit Dutta",
         //     designation: "Hon'ble Member of Parliament, Assam | Former Minister of Sericulture, Handloom & Textiles"
         // },
         {
-            image: IAS_Anil_Kumar_Jha,
+            image: '/assets/OurSocialImpact/IAS_Anil_Kumar_Jha.jpg',
             name: "IAS Mr. Anil Kumar Jha",
             designation: "Cane Commissioner, Government of India | Former Joint Secretary, Ministry of Agriculture"
         },
         {
-            image: JitendraParashar,
+            image: '/assets/Gov/Jitendra Parashar.jpg',
             name: "Mr. Jitendra Parashar",
             designation: "Joint Director, Information Technology Department | Government of Madhya Pradesh"
         },
         {
-            image: IAS_Awanish,
+            image: '/assets/Gov/IAS Awanish Sharan.jpg',
             name: "IAS Mr. Awanish Sharan",
             designation: "Chief Executive Officer, Skill Development Mission | Government of Chhattisgarh"
         },
         {
-            image: CharanDasMahant,
+            image: '/assets/Gov/Charan Das Mahant.png',
             name: "Dr. Charan Das Mahant",
             designation: "Former Lok Sabha Speaker, Government of Chhattisgarh | Former Cabinet Minister, Government of India"
         }

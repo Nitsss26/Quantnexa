@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import Home2 from '../../../../assets/Home2.jpg';
-import GovAssoc2 from '../../../../assets/gov_association2.jpg';
+// Imports removed
 
 export default function GovAdvisor() {
     const [currentGovImage, setCurrentGovImage] = useState(0);
-    const govImages = [Home2, GovAssoc2];
+    const govImages = ['/assets/Home2.jpg', '/assets/gov_association2.jpg'];
 
     useEffect(() => {
         const interval = setInterval(() => {
