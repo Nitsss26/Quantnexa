@@ -60,7 +60,7 @@ export default function TechStackSlider() {
           
         </span>
         <h2 className="font-cyber font-black text-3xl md:text-4xl text-white tracking-tight">
-          Technologies &nbsp; We &nbsp; Build &nbsp; With
+          Technologies We Build With
         </h2>
         <p className="text-white/50 text-sm mt-2 font-sans">
           A battle-tested stack powering every platform we ship.

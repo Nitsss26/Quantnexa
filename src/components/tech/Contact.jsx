@@ -215,7 +215,7 @@ export default function Contact() {
           </span>
           
           <h2 className="text-4xl md:text-6xl font-cyber font-black tracking-tight text-white uppercase mb-4 leading-none select-none">
-            BUILD &nbsp; THE  &nbsp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-neon-emerald text-neon-glow">IMPOSSIBLE</span>
+            BUILD  THE   <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-neon-emerald text-neon-glow">IMPOSSIBLE</span>
           </h2>
           
           <p className="text-cyber-text text-sm md:text-base font-mono max-w-xl mx-auto select-none">

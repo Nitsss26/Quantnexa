@@ -24,7 +24,7 @@ export default function ImpactStats() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="font-mono text-xs text-neon-green tracking-widest block mb-3 animate-pulse">SYSTEM METRICS</span>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight uppercase font-cyber mb-4">
-            Production &nbsp; Scale &nbsp; & &nbsp; Impact
+            Production  Scale  &  Impact
           </h2>
           <div className="h-0.5 w-24 bg-neon-green mx-auto mb-6 shadow-[0_0_8px_#22ff66]" />
           <p className="text-cyber-text text-sm md:text-base font-mono">

@@ -687,9 +687,9 @@ export default function TechAreas() {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-cyber font-black text-white tracking-tight uppercase mb-4 leading-none select-none">
-            MULTIPLE &nbsp; DOMAINS. <br />
+            MULTIPLE  DOMAINS. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-neon-emerald text-neon-glow">
-              INFINITE &nbsp; SOLUTIONS.
+              INFINITE  SOLUTIONS.
             </span>
           </h2>
           

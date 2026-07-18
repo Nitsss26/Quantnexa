@@ -8,6 +8,7 @@ import AILabs from '../components/tech/AILabs';
 import ImpactStats from '../components/tech/ImpactStats';
 import IITTeamSection from '../components/tech/IITTeamSection';
 import Contact from '../components/tech/Contact';
+import GovAdvisor from '../components/tech/GovAdvisor';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <TechAreas />
       <ProductShowcase />
+      <GovAdvisor />
       <TechStackMarquee />
       <AILabs />
       <ImpactStats />

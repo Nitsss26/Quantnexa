@@ -8,6 +8,7 @@ const logoImg = '/assets/tech/QuantNexaLogoFinal.png';
 const NAV_ITEMS = [
   { label: 'Home', href: '/', isRoute: true },
   { label: 'About', href: '/aboutnexa', isRoute: true },
+  { label: 'Gov. Partnership', href: '/gov-partnerships', isRoute: true },
   { label: 'Products', href: '#products' },
   { label: 'AI Labs', href: '#ai-labs' },
   { label: 'Metrics', href: '#metrics' },
@@ -64,8 +65,8 @@ export default function Navbar() {
       if (item.href === '/') {
         router.push('/');
         setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
-      } else if (item.href === '/aboutnexa') {
-        router.push('/aboutnexa');
+      } else if (item.href === '/aboutnexa' || item.href === '/gov-partnerships') {
+        router.push(item.href);
       }
       return;
     }
