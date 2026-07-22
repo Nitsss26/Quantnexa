@@ -32,7 +32,7 @@ const SonaliImg = '/assets/tech-team/Sonali_Kumari.png';
 const VishalImg = '/assets/tech-team/Vishal_Maurya.png';
 
 const Embers = () => {
-    const [embers, setEmbers] = React.useState([]);
+    const [embers, setEmbers] = React.useState<any[]>([]);
 
     React.useEffect(() => {
         setEmbers(Array.from({ length: 40 }).map(() => ({

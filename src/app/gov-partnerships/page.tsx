@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 // Image Imports Removed (using static paths now)
 const Embers = () => {
-    const [embers, setEmbers] = React.useState([]);
+    const [embers, setEmbers] = React.useState<any[]>([]);
 
     React.useEffect(() => {
         setEmbers(Array.from({ length: 40 }).map(() => ({
