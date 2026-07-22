@@ -126,11 +126,17 @@ const officials = [
             name: "Shri Anil Firojiya",
             designation: "Member of Parliament | Parliamentary Committee on Tourism and Culture, Government of India"
         },
+             {
+            image: '/assets/Gov/Dr.-Hemant-Khandelwal.jpg',
+            name: "Dr. Hemant Khandelwal",
+            designation: "Hon'ble State President, Bharatiya Janata Party (BJP), Madhya Pradesh"
+        },
         {
             image: '/assets/Gov/JYOTSNA.png',
             name: "Smt. Jyotsna Charandas Mahant",
             designation: "Member of Parliament (Lok Sabha), Korba | Standing Committee on Coal, Mines and Steel"
         },
+   
         // {
         //     image: '/assets/OurSocialImpact/MP_Assam.jpg',
         //     name: "Shri Ranjit Dutta",

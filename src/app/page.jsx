@@ -15,8 +15,8 @@ export default function Home() {
     <>
       <Hero />
       <TechAreas />
-      <ProductShowcase />
       <GovAdvisor />
+      <ProductShowcase />
       <TechStackMarquee />
       <AILabs />
       <ImpactStats />
