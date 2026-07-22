@@ -79,7 +79,7 @@ export default function AboutNexa() {
       window.scrollTo(0, 0);
     }, []);
 
-    const leaders = [
+    const leaders: any[] = [
         {
             image: S1Img,
             name: "Mr. \u00A0 Chintan \u00A0Vatsa\u00A0 Jha",
@@ -251,7 +251,7 @@ export default function AboutNexa() {
                                 <div className="w-28 h-28 rounded-md overflow-hidden border-2 border-cyber-border/50 group-hover:border-neon-emerald/80 mb-4 shrink-0 transition-all duration-500">
                                     <img src={mgr.img} alt={mgr.name} className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110" />
                                 </div>
-                                <div className="text-[9px] text-neon-emerald font-mono uppercase tracking-[0.2em] mb-1 font-bold">{mgr.id}</div>
+                                <div className="text-[9px] text-neon-emerald font-mono uppercase tracking-[0.2em] mb-1 font-bold">{(mgr as any).id}</div>
                                 <h3 className="text-white font-cyber text-xl uppercase leading-none mb-1">{mgr.name}</h3>
                                 <div className="text-neon-emerald font-mono text-[10px] tracking-widest uppercase mb-4 ">{mgr.role}</div>
                                 <p className="text-cyber-text font-mono text-xs opacity-70 italic">"{mgr.quote}"</p>

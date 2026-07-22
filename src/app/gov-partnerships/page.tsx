@@ -46,7 +46,7 @@ const Embers = () => {
     );
 };
 
-const CyberOfficialCard = ({ image, name, designation, index, imageScale = 1, objectPosition = "top", className = "" }) => {
+const CyberOfficialCard = ({ image, name, designation, index, imageScale = 1, objectPosition = "top", className = "" }: any) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
