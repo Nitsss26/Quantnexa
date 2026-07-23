@@ -104,6 +104,11 @@ export default function GovPartnerships() {
     }, []);
 
 const officials = [
+        {
+            image: '/assets/Gov/Shri-Jishnu-Dev-Varma.jpg',
+            name: "Shri Jishnu Dev Varma",
+            designation: "Hon'ble Governor of Maharashtra"
+        },
         // {
         //     image: '/assets/OurSocialImpact/EduMinAssam.jpg',
         //     name: "Dr. Ranoj Pegu",
