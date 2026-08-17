@@ -18,7 +18,7 @@ export default function GovAdvisor() {
         <section className="relative w-full py-20 bg-[#020703] overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* LEFT: Text Content */}
+                  
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -54,14 +54,14 @@ export default function GovAdvisor() {
                         </div> */}
                     </motion.div>
 
-                    {/* RIGHT: Image with Frame */}
+                    
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="relative order-1 md:order-2"
                     >
-                        {/* Decorative Elements */}
+                        
                         <div className="absolute -top-8 -right-8 w-16 h-28 transform scale-x-[-1]">
                             <svg viewBox="0 0 80 130" fill="none" className="w-full h-full">
                                 <path d="M40 0 C40 60, 0 80, 0 130" stroke="#FFD700" strokeWidth="3" fill="none" opacity="0.6" />
