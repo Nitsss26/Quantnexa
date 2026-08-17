@@ -8,7 +8,7 @@ const logoImg = '/assets/tech/QuantNexaLogoFinal.png';
 const NAV_ITEMS = [
   { label: 'Home', href: '/', isRoute: true },
   { label: 'About', href: '/aboutnexa', isRoute: true },
-  { label: 'Gov. Partnership', href: '/gov-partnerships', isRoute: true },
+  // { label: 'Gov. Partnership', href: '/gov-partnerships', isRoute: true },
   { label: 'Products', href: '#products' },
   { label: 'AI Labs', href: '#ai-labs' },
   { label: 'Metrics', href: '#metrics' },
