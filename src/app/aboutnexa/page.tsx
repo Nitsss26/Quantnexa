@@ -30,6 +30,7 @@ const SaurabImg = '/assets/tech-team/Saurab_Yadav.png';
 const ShwetaImg = '/assets/tech-team/Shweta_Keshari.png';
 const SonaliImg = '/assets/tech-team/Sonali_Kumari.png';
 const VishalImg = '/assets/tech-team/Vishal_Maurya.png';
+const AyushiPanwarImg = '/assets/tech-team/Ayushi_Panwar.png';
 
 const Embers = () => {
     const [embers, setEmbers] = React.useState<any[]>([]);
@@ -106,7 +107,7 @@ export default function AboutNexa() {
 
     const techTeam = [
         { name: "Aditya Sharma", image: AdityaImg },
-        { name: "Amrita Sinha", image: AmritaImg },
+     
         { name: "Ashu Patel", image: AshuImg },
         { name: "Ayushi Rai", image: AyushiImg },
         { name: "Diyanshu Kumar Sahu", image: DiyanshuImg },
@@ -123,6 +124,8 @@ export default function AboutNexa() {
         { name: "Sonali Kumari", image: SonaliImg },
         { name: "Vishal Maurya", image: VishalImg }
     ];
+
+    let a={ name: "Amrita Sinha", image: AmritaImg }
 
     return (
         <main className="relative w-full pb-20 select-none overflow-x-hidden">
@@ -184,7 +187,7 @@ export default function AboutNexa() {
                 </motion.div>
 
                 {/* Guiding Team */}
-                <div className="mb-32">
+                {/* <div className="mb-32">
                     <div className="flex items-center gap-4 mb-12">
                         <div className="h-8 w-1.5 bg-neon-green shadow-[0_0_8px_#22ff66]" />
                         <h2 className="text-3xl md:text-5xl font-cyber font-black text-white uppercase tracking-tight">The <span className="text-neon-green text-neon-glow">Guiding</span> Force</h2>
@@ -222,7 +225,7 @@ export default function AboutNexa() {
                             </motion.div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* Management Team */}
                 <div className="mb-32">
@@ -231,11 +234,14 @@ export default function AboutNexa() {
                         <h2 className="text-3xl md:text-5xl font-cyber font-black text-white uppercase tracking-tight">The <span className="text-neon-green text-neon-glow">Core Team</span></h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {[
-                            { name: "Mr. \u00A0 Raj\u00A0 Kumar\u00A0 Sahoo", role: "Associate Director Business & Operations", quote: "Scaling our development operations by standardizing advanced software pipelines.", img: RajImg, },
-                            { name: "Mr.\u00A0 Vivek\u00A0 Yadav", role: "HR Admin & Finance Head", quote: "Cultivating an environment where deep tech research and development thrives.", img: VivekImg, },
-                            { name: "Mr.\u00A0 Nitesh", role: "Technology & Marketing Head", quote: "Designing robust cloud architectures and ensuring perfect execution of our products.", img: NiteshImg, },
+                           
+                            { name: "Ms.\u00A0 Amrita Sinha", role: "Technical Lead", quote: "Designing robust cloud architectures and ensuring perfect execution of our products.", img: AmritaImg, },
+                            { name: "Ms. \u00A0 Ayushi\u00A0 Panwar", role: "Product & Operations Lead", quote: "Scaling our development operations by standardizing advanced software pipelines.", img: AyushiPanwarImg, },
+                            // { name: "Mr. \u00A0 \u00A0 Kumar\u00A0 Sahoo", role: "Associate Director Business & Operations", quote: "Scaling our development operations by standardizing advanced software pipelines.", img: RajImg, },
+                            // { name: "Mr.\u00A0 Vivek\u00A0 Yadav", role: "HR Admin & Finance Head", quote: "Cultivating an environment where deep tech research and development thrives.", img: VivekImg, },
+                           
                             // { name: "Mr.\u00A0 Anand\u00A0 Kumar", role: "Senior SDE & Curriculum Lead", quote: "Empowering developers through rigorous curriculum and cutting-edge software practices.", img: AnandImg, }
                         ].map((mgr, i) => (
                             <motion.div
