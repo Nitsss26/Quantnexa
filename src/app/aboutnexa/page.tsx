@@ -237,7 +237,7 @@ export default function AboutNexa() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {[
                            
-                            { name: "Ms. Nitesh", role: "Technical Lead", quote: "Designing robust cloud architectures and ensuring perfect execution of our products.", img: NiteshImg, },
+                            { name: "Mr. Nitesh", role: "Technical Lead", quote: "Designing robust cloud architectures and ensuring perfect execution of our products.", img: NiteshImg, },
                             { name: "Ms. Ayushi\u00A0 Panwar", role: "Product & Operations Lead", quote: "Scaling our development operations by standardizing advanced software pipelines.", img: AyushiPanwarImg, },
                             // { name: "Mr. \u00A0 \u00A0 Kumar\u00A0 Sahoo", role: "Associate Director Business & Operations", quote: "Scaling our development operations by standardizing advanced software pipelines.", img: RajImg, },
                             // { name: "Mr.\u00A0 Vivek\u00A0 Yadav", role: "HR Admin & Finance Head", quote: "Cultivating an environment where deep tech research and development thrives.", img: VivekImg, },
