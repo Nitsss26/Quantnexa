@@ -6,7 +6,7 @@ import ParticleBackground from './ParticleBackground';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-export default function TechLayout({ children }) {
+export default function  TechLayout({ children }) {
   const [splashDone, setSplashDone] = useState(false);
 
   useEffect(() => {

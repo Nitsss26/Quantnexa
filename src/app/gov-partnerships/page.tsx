@@ -166,6 +166,11 @@ const officials = [
             image: '/assets/Gov/Charan Das Mahant.png',
             name: "Dr. Charan Das Mahant",
             designation: "Former Lok Sabha Speaker, Government of Chhattisgarh | Former Cabinet Minister, Government of India"
+        },
+        {
+            image: '/assets/OurSocialImpact/Dr._Raman_Singh.jpg',
+            name: "Dr. Raman Singh",
+            designation: "Vidhansabha Speaker, Government of Chhattisgarh"
         }
     ];
 
